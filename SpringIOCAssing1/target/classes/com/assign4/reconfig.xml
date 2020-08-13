@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+   
+   
+   <bean class="com.assign4.Test" name="test">
+  <property name="testId" value="s001"></property>
+  <property name="testTitle" value="DS"></property>
+   <property name="testMarks">
+   <value>80</value>
+   </property>
+   </bean>
+
+
+ <bean class="com.assign4.Test" name="test2">
+    <property name="testId" value="s002"></property>
+  <property name="testTitle" value="oracle"></property>
+   <property name="testMarks">
+   <value>83</value>
+  </property>
+   </bean>
+
+
+
+
+
+<bean class="com.assign4.student" name="std">
+  <property name="studentId" value="T001"></property>
+  <property name="sname" value="Rahul"></property>
+  
+  
+<property name="studentTest">
+<ref bean="test" />
+</property>
+    </bean>
+
+<bean class="com.assign4.student" name="std2">
+
+ <property name="studentId" value="T002"></property>
+ <property name="sname" value="akash"></property>
+  
+  
+<property name="studentTest">
+<ref bean="test2" />
+</property>
+
+  
+   </bean>
+
+
+    </beans>

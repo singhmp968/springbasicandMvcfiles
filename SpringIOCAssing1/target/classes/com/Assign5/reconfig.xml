@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+   
+   
+   <bean class="com.Assign5.country" name="c1">
+  <property name="countryId" value="c001"></property>
+  <property name="countryname" value="India"></property>
+      </bean>
+
+<bean class="com.Assign5.country" name="c2">
+  <property name="countryId" value="c002"></property>
+  <property name="countryname" value="Canada"></property>
+      </bean>
+
+ 
+
+
+
+
+<bean class="com.Assign5.Player" name="p1">
+  <property name="playerId" value="p001"></property>
+  <property name="playerName" value="sachin"></property>
+  
+  
+<property name="country">
+<ref bean="c1" />
+</property>
+    </bean>
+
+
+<bean class="com.Assign5.Player" name="p2">
+  <property name="playerId" value="p002"></property>
+  <property name="playerName" value="chin"></property>
+  
+  
+<property name="country">
+<ref bean="c1" />
+</property>
+
+    </bean>
+
+
+<bean class="com.Assign5.Player" name="p3">
+  <property name="playerId" value="p003"></property>
+  <property name="playerName" value="ingov"></property>
+  
+  
+<property name="country">
+<ref bean="c2" />
+</property>
+    </bean>
+
+<bean class="com.Assign5.Player" name="p4">
+  <property name="playerId" value="p004"></property>
+  <property name="playerName" value="changa"></property>
+  
+  
+<property name="country">
+<ref bean="c2" />
+</property>
+
+    </bean>
+
+
+<bean class="com.Assign5.Player" name="p5">
+  <property name="playerId" value="p005"></property>
+  <property name="playerName" value="kansh"></property>
+  
+  
+<property name="country">
+<ref bean="c2" />
+</property>
+
+    </bean>
+
+
+    </beans>
